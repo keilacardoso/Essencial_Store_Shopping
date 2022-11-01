@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 @Repository
-public interface ShopRepository extends JpaRepository<Shop, Long> {
+public interface ShopRepository extends JpaRepository<Shop, Long>, ReportRepository {
     public List<Shop> findAllByUserIdentifier(String userIdentifier);
     public List<Shop> findAllByTotalGreaterThen(Float total);
     public List<Shop> findAllByDateGreaterThanEquals(Date date);
